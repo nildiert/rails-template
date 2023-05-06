@@ -89,6 +89,7 @@ Rails.application.configure do
   end
 
   config.hosts << "rails-production-248d.up.railway.app"
+  config.hosts << [".localhost", IPAddr.new("0.0.0.0/0"), IPAddr.new("::/0")]
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
