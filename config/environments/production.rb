@@ -2,7 +2,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.hosts << "rails-production-248d.up.railway.app"
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -89,7 +89,6 @@ Rails.application.configure do
   end
 
   config.hosts << "rails-production-248d.up.railway.app"
-  config.hosts << [".localhost", IPAddr.new("0.0.0.0/0"), IPAddr.new("::/0")]
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
